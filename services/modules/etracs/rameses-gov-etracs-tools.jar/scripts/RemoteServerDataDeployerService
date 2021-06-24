@@ -193,6 +193,8 @@ class RemoteServerDataDeployerService {
 
 		bank_db.where('1=1').update([ state: 'INACTIVE' ]); 
 		entity.data.banks.each{ 
+			if ( !it.deposittype ) it.deposittype = 'LOCAL'; 
+			
 			if ( bank_db.find([ objid: it.objid ]).select('objid').first()) {
 				bank_db.update( it ); 
 			} else { 

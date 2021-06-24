@@ -10,10 +10,10 @@ readTimeout=300000
 connectionTimeout=5000
 filemgmt.enabled=false
 
-ws.host=${app_server_ip}:8060
+#ws.host=${app_server_ip}:8060
 #res.host=${app_server_ip}
 
-socketio.host=${app_server_ip}:7080
+#socketio.host=${app_server_ip}:7080
 
 entity.app.host=${app_server_ip}:8070
 entity.app.context=etracs25
@@ -29,6 +29,7 @@ entity.app.context=etracs25
   <module version="2.50" file="core/osiris2-draw.jar"  />
   <module version="2.50" file="core/osiris2-framework.jar"  />
   <module version="2.52" file="core/osiris2-report.jar"  />
+  <module version="2.50" file="core/rameses-client-notification-socketio.jar"  />
   <module version="2.51" file="core/rameses-client-ui.jar"  />
   <module version="2.50" file="core/rameses-client-ui-bio.jar"  />
   <module version="2.50" file="core/rameses-client-ui-jfx.jar"  />
@@ -41,7 +42,6 @@ entity.app.context=etracs25
   <module version="2.50" file="shared/client-ui-extended.jar"  />
   <module version="2.50" file="shared/rameses-client-menu.jar"  />
   <module version="2.50" file="shared/rameses-client-report.jar"  />
-  <module version="2.50" file="shared/rameses-client-notification2.jar"  />
   <module version="2.50" file="shared/rameses-rules-mgmt.jar"  />
   <module version="2.50" file="shared/rameses-workflow-mgmt.jar"  />
   <module version="2.50" file="shared/rameses-enterprise.jar"  />
