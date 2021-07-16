@@ -67,6 +67,6 @@ entity.app.context=etracs25
   <module version="2.50" file="treasury/rameses-gov-depositslip.jar"  />
   <module version="2.51" file="treasury/rameses-gov-treasury.jar"  />
   <module version="2.50" file="treasury/rameses-gov-treasury-report.jar"  />
-  <module version="2.50" file="treasury/rameses-gov-treasury-tool.jar"  />
+  <module version="2.51" file="treasury/rameses-gov-treasury-tool.jar"  />
 </modules>
 </app>
