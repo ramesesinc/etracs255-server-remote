@@ -1,6 +1,6 @@
 <app>
 <env>
-app.title=ETRACS 2.5 build 2.5.04.01.01 (${lgu_name})
+app.title=ETRACS 2.5 build 2.5.04.02.01 (${lgu_name})
 app.host=${app_server_ip}:8070
 app.cluster=osiris3
 app.context=etracs25
@@ -36,7 +36,7 @@ entity.app.context=etracs25
   <module version="2.50" file="core/rameses-common2.jar"  />
   <module version="2.50" file="core/rameses-custom-impl.jar"  />
   <module version="2.50" file="core/rameses-jdbc16.jar"  />
-  <module version="2.51" file="core/rameses-seti.jar"  />
+  <module version="2.52" file="core/rameses-seti.jar"  />
 
   <module version="2.50" file="shared/client-system.jar"  />
   <module version="2.50" file="shared/client-ui-extended.jar"  />
@@ -45,8 +45,8 @@ entity.app.context=etracs25
   <module version="2.50" file="shared/rameses-rules-mgmt.jar"  />
   <module version="2.50" file="shared/rameses-workflow-mgmt.jar"  />
   <module version="2.50" file="shared/rameses-enterprise.jar"  />
-  <module version="2.50" file="shared/rameses-enterprise-admin.jar"  />
-  <module version="2.50" file="shared/rameses-enterprise-admin-plugin.jar"  />
+  <module version="2.51" file="shared/rameses-enterprise-admin.jar"  />
+  <module version="2.51" file="shared/rameses-enterprise-admin-plugin.jar"  />
   <module version="2.50" file="shared/rameses-enterprise-financial.jar"  />
   <module version="2.50" file="shared/rameses-email-client.jar"  />
   <module version="2.50" file="shared/rameses-jasper-client.jar"  />
@@ -63,10 +63,10 @@ entity.app.context=etracs25
   <module version="2.50" file="entity/rameses-enterprise-entity-tool.jar"  />
   <module version="2.50" file="entity/rameses-gov-etracs-entity.jar"  />
 
-  <module version="2.50" file="treasury/rameses-treasury-common.jar"  />
+  <module version="2.51" file="treasury/rameses-treasury-common.jar"  />
   <module version="2.50" file="treasury/rameses-gov-depositslip.jar"  />
-  <module version="2.51" file="treasury/rameses-gov-treasury.jar"  />
+  <module version="2.52" file="treasury/rameses-gov-treasury.jar"  />
   <module version="2.50" file="treasury/rameses-gov-treasury-report.jar"  />
-  <module version="2.51" file="treasury/rameses-gov-treasury-tool.jar"  />
+  <module version="2.52" file="treasury/rameses-gov-treasury-tool.jar"  />
 </modules>
 </app>
