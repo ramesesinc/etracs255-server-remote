@@ -1,3 +1,4 @@
+-- ## 2021-09-15
 
 if object_id('dbo.vw_collectionvoucher_cashreceiptshare', 'V') IS NOT NULL
 	drop view vw_collectionvoucher_cashreceiptshare

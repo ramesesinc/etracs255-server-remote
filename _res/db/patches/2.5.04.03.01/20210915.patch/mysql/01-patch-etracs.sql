@@ -1,3 +1,4 @@
+-- ## 2021-09-15
 
 drop view if exists vw_remittance_cashreceiptshare
 ;
