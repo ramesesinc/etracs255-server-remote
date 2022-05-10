@@ -110,7 +110,6 @@ class CashbookReportService {
 			data.items = report_db.getSummaries( params ); 
 			balinfo = report_db.findBeginBalance( params ); 
 			revfund = report_db.findRevolvingFund( params ); 
-			allow_begbal = true; 
 			
 			def bal_dr = (balinfo.dr ? balinfo.dr : 0.0); 
 			def bal_cr = (balinfo.cr ? balinfo.cr : 0.0);
@@ -137,6 +136,11 @@ class CashbookReportService {
 
 				balinfo.dr = bal_dr - (begbalinfo.dr ? begbalinfo.dr : 0.0);
 				balinfo.cr = bal_cr - (begbalinfo.cr ? begbalinfo.cr : 0.0);
+				balinfo.balance = balinfo.dr - balinfo.cr; 
+			}
+
+			if ( balinfo.balance ) {
+				allow_begbal = true; 
 			}
 		} 
 		else { 
@@ -158,6 +162,15 @@ class CashbookReportService {
 			balinfo.refid = 'begin_balance'; 
 			balinfo.reftype = '** BEGIN BALANCE **'; 
 			balinfo.particulars = balinfo.reftype; 
+
+			if ( balinfo.dr > 0 && balinfo.balance > 0 && balinfo.cr > 0 ) {
+				balinfo.dr += balinfo.balance; 
+			}
+			if ( balinfo.dr < 0 && balinfo.dr == balinfo.balance ) {
+				balinfo.dr = null;
+				balinfo.adr = 0.0;
+				balinfo.balance = 0.0;
+			}
 
 			if ( data.items ) { 
 				data.items.add(0, balinfo); 
